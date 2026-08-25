@@ -1,0 +1,22 @@
+{
+  "name": "clauc",
+  "version": "0.1.0",
+  "description": "Track how long a project + branch actually takes, from inside Claude Code",
+  "private": true,
+  "license": "MIT",
+  "author": { "name": "c³d", "url": "https://github.com/c3d-gg" },
+  "repository": { "type": "git", "url": "https://github.com/c3d-gg/clauc" },
+  "type": "module",
+  "bin": {
+    "clauc": "./src/cli.ts"
+  },
+  "scripts": {
+    "check": "tsc --noEmit && bun test",
+    "test": "bun test",
+    "cli": "bun run src/cli.ts"
+  },
+  "devDependencies": {
+    "@types/bun": "latest",
+    "typescript": "^5.7.0"
+  }
+}

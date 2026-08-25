@@ -1,0 +1,14 @@
+#!/usr/bin/env sh
+set -eu
+
+# CLAUDE_PLUGIN_ROOT is set when installed as a Claude Code plugin; otherwise
+# resolve relative to this script so a plain checkout works too.
+ROOT="${CLAUDE_PLUGIN_ROOT:-$(CDPATH= cd -- "$(dirname -- "$0")/.." && pwd)}"
+. "$ROOT/scripts/bun-path.sh"
+
+if ! BUN="$(find_bun)"; then
+  echo "clauc: bun not found. Install it or set CLAUC_BUN=/path/to/bun." >&2
+  exit 127
+fi
+
+exec "$BUN" run "$ROOT/src/cli.ts" "$@"

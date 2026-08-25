@@ -1,0 +1,11 @@
+#!/usr/bin/env sh
+set -eu
+
+ROOT="${CLAUDE_PLUGIN_ROOT:-$(CDPATH= cd -- "$(dirname -- "$0")/.." && pwd)}"
+. "$ROOT/scripts/bun-path.sh"
+
+# Hook entry point: a Claude Code event becomes one beat. If bun is missing,
+# exit clean — a broken tracker must never break the session it's timing.
+BUN="$(find_bun)" || exit 0
+
+exec "$BUN" run "$ROOT/src/hook.ts"

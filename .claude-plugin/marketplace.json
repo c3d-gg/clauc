@@ -1,0 +1,15 @@
+{
+  "name": "clauc-dev",
+  "metadata": {
+    "description": "Local development marketplace — install the real thing from c3d-gg/claude-plugin"
+  },
+  "owner": { "name": "c³d", "url": "https://github.com/c3d-gg" },
+  "plugins": [
+    {
+      "name": "clauc",
+      "source": "./",
+      "description": "Branch-level time tracking for Claude Code (local checkout)",
+      "category": "productivity"
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "name": "clauc",
+  "description": "Tracks how long each project + branch actually takes — elapsed time, active work time, and prompt volume — so you can estimate from your own history instead of vibes.",
+  "version": "0.1.0",
+  "author": { "name": "c³d", "url": "https://github.com/c3d-gg" },
+  "homepage": "https://github.com/c3d-gg/clauc",
+  "repository": "https://github.com/c3d-gg/clauc",
+  "license": "MIT",
+  "keywords": ["time-tracking", "estimation", "git", "hooks", "productivity"]
+}
